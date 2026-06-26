@@ -15,10 +15,10 @@ public class Session {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true, nullable = false)
+    @JoinColumn(name = "movie_id", nullable = false)
     private Movie movie;
 
-    @Column(unique = true, nullable = true)
+    @JoinColumn(name = "cinema_id", nullable = true)
     private Cinema cinema;
 
     @Column(unique = true, nullable = false)

@@ -22,5 +22,8 @@ public class User {
     private String email;
 
     @Column(nullable = false)
-    private int number;
+    private Long number;
+
+    @Column(nullable = false)
+    private String password;
 }
