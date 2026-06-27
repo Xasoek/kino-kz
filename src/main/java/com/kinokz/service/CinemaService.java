@@ -11,6 +11,6 @@ public interface CinemaService {
     List<CinemaDto> findAll();
     CinemaDto create(CinemaDto cinemaDto);
     void deleteById(Long id);
-    CinemaDto updateById(Long id, UserDto dto);
+    CinemaDto updateById(Long id, CinemaDto dto);
 
 }
