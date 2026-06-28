@@ -15,15 +15,17 @@ public class Session {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @ManyToOne
     @JoinColumn(name = "movie_id", nullable = false)
     private Movie movie;
 
+    @ManyToOne
     @JoinColumn(name = "cinema_id", nullable = true)
     private Cinema cinema;
 
     @Column(unique = true, nullable = false)
     private LocalDateTime startTime;
 
-    @Column(unique = true, nullable = false)
+    @Column(nullable = false)
     private int price;
 }
